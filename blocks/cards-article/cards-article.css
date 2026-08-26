@@ -1,0 +1,77 @@
+/* Block: cards-article -- WKND article/adventure image list */
+
+/* Borderless cards: image on top, uppercase bold title, uppercase grey description. */
+
+.cards-article > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px 14px;
+}
+
+@media (width >= 600px) {
+  .cards-article > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-article > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card: borderless, no background (WKND) */
+.cards-article > ul > li {
+  border: none;
+  background-color: transparent;
+}
+
+/* Image on top: 13:10 aspect, cover crop */
+.cards-article .cards-article-card-image {
+  line-height: 0;
+}
+
+.cards-article > ul > li img {
+  width: 100%;
+  aspect-ratio: 13 / 10;
+  object-fit: cover;
+}
+
+/* Body sits flush under image, aligned to image edges */
+.cards-article .cards-article-card-body {
+  margin: 0;
+}
+
+/* Title: uppercase, bold, dark -- body font, not heading font */
+.cards-article .cards-article-card-body h3 {
+  margin: 12px 0 0;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.cards-article .cards-article-card-body h3 a:any-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.cards-article .cards-article-card-body h3 a:hover {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* Description: uppercase, small, grey */
+.cards-article .cards-article-card-body p {
+  margin: 16px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #696969;
+}

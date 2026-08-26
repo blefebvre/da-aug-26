@@ -1,0 +1,12 @@
+{
+  "type": "da",
+  "sites": {
+    "da-aug-26": {
+      "previewOrg": "blefebvre",
+      "previewSite": "da-aug-26",
+      "contentHostUrl": "https://content.da.live/blefebvre/da-aug-26/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  },
+  "pluginRoot": "/home/node/.excat-marketplaces/excat-marketplace/excat"
+}

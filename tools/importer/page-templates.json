@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://wknd.site/us/en.html"
+      ],
+      "representativeUrl": "https://wknd.site/us/en.html",
+      "urlPattern": "/us/*",
+      "description": "WKND homepage: hero carousel, featured article, article card grids, and a feature hero.",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            ".carousel.cmp-carousel--hero"
+          ]
+        },
+        {
+          "name": "columns-featured",
+          "instances": [
+            ".teaser.cmp-teaser--featured"
+          ],
+          "section": "grey"
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            ".image-list.list"
+          ]
+        },
+        {
+          "name": "hero-feature",
+          "instances": [
+            ".teaser.cmp-teaser--hero.cmp-teaser--imagebottom"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-hero-carousel",
+          "name": "Hero carousel",
+          "selector": ".carousel.cmp-carousel--hero",
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-featured-article",
+          "name": "Featured Article",
+          "selector": ".teaser.cmp-teaser--featured",
+          "style": "grey",
+          "blocks": [
+            "columns-featured"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3-recent-articles",
+          "name": "Recent Articles",
+          "selector": "main.cmp-layout-container--fixed:nth-of-type(1) > div.cmp-container > div.aem-Grid > div.image-list.list",
+          "style": null,
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.separator"
+          ]
+        },
+        {
+          "id": "section-4-next-adventures",
+          "name": "Next Adventures",
+          "selector": ".teaser.cmp-teaser--hero.cmp-teaser--imagebottom",
+          "style": null,
+          "blocks": [
+            "hero-feature"
+          ],
+          "defaultContent": [
+            "div.title"
+          ]
+        },
+        {
+          "id": "section-5-where-to-go",
+          "name": "Where do you want to go?",
+          "selector": "main.cmp-layout-container--fixed:nth-of-type(2) > div.cmp-container > div.aem-Grid > div.image-list.list",
+          "style": null,
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "div.title",
+            "div.separator"
+          ]
+        }
+      ]
+    }
+  ]
+}

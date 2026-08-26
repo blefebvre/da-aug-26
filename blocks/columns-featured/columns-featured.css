@@ -1,0 +1,109 @@
+/* Block: columns-featured (featured teaser) */
+
+/* Values extracted from source computed styles at wknd.site featured teaser. */
+
+/* Row: mobile-first, stacked (text on top, image below) */
+.columns-featured > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text content cell -- grey panel (matches source .cmp-teaser__content) */
+.columns-featured > div > div {
+  padding: 63px 36px 36px;
+  background-color: var(--light-color);
+}
+
+/* Description paragraphs */
+.columns-featured p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24.5px;
+  color: var(--text-color);
+}
+
+/* Title */
+.columns-featured h2 {
+  margin: 18px 0;
+  font-family: var(--heading-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 54px;
+  color: var(--text-color);
+}
+
+/* Eyebrow / pretitle -- first paragraph in the text cell */
+.columns-featured > div > div > p:first-child {
+  margin: 0 0 13.5px;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 45px;
+  color: var(--text-color);
+}
+
+/* Button paragraph wrapper spacing */
+.columns-featured > div > div > p:last-child {
+  margin: 18px 0;
+}
+
+/* CTA link styled as the brand yellow button (EDS did not auto-decorate it) */
+.columns-featured a:any-link {
+  display: inline-block;
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 0;
+  padding: 14px 35px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.columns-featured a:any-link:hover {
+  background-color: var(--text-color);
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Image cell */
+.columns-featured > div > .columns-featured-img-col {
+  padding: 0;
+}
+
+.columns-featured picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.columns-featured img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Desktop: image left, text right (DOM order is text-then-image, so row-reverse) */
+@media (width >= 900px) {
+  .columns-featured > div {
+    flex-direction: row-reverse;
+    align-items: stretch;
+  }
+
+  /* Text panel ~38% */
+  .columns-featured > div > div {
+    flex: 1;
+  }
+
+  /* Image ~62% */
+  .columns-featured > div > .columns-featured-img-col {
+    flex: 2;
+  }
+}

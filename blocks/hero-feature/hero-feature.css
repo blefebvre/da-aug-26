@@ -1,0 +1,88 @@
+/* hero-feature: full-width photo with an overlapping white content card (lower-left) */
+
+/* Values extracted from wknd.site feature hero computed styles. */
+
+/* full-bleed: cancel the section content max-width + padding */
+.hero-feature-container .hero-feature-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+/* --- image row (row 1) --- */
+.hero-feature > div:first-child {
+  width: 100%;
+  line-height: 0;
+}
+
+/* --- white content card (row 2), overlaps bottom of image --- */
+.hero-feature > div:last-child {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+  margin-top: -48px;
+  background-color: var(--background-color);
+}
+
+.hero-feature > div:first-child > div {
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+}
+
+.hero-feature > div:last-child > div {
+  padding: 8px 24px 24px;
+  text-align: left;
+}
+
+.hero-feature picture {
+  display: block;
+  height: 100%;
+}
+
+.hero-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-feature h2 {
+  margin: 18px 0 0;
+  font-family: var(--heading-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 54px;
+  color: var(--text-color);
+}
+
+.hero-feature p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 31.5px;
+  color: var(--text-color);
+}
+
+/* CTA button matches brand button (yellow, uppercase) via global a.button styles */
+.hero-feature p.button-container,
+.hero-feature .button-container {
+  margin: 18px 0;
+}
+
+/* --- desktop: pull the card up over the image, cap its width --- */
+@media (width >= 900px) {
+  .hero-feature > div:last-child {
+    width: 100%;
+    max-width: 1192px;
+    margin-top: -180px;
+  }
+
+  .hero-feature > div:last-child > div {
+    padding: 0 28px 8px;
+  }
+}
