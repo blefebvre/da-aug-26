@@ -164,6 +164,73 @@
           ]
         }
       ]
+    },
+    {
+      "name": "adventures",
+      "urls": [
+        "https://wknd.site/us/en/adventures.html"
+      ],
+      "representativeUrl": "https://wknd.site/us/en/adventures.html",
+      "description": "WKND adventures landing: page title, feature hero intro, and a tabbed grid of adventure cards.",
+      "urlPattern": "/us/en/*",
+      "blocks": [
+        {
+          "name": "hero-intro",
+          "instances": [
+            ".teaser.cmp-teaser--hero"
+          ]
+        },
+        {
+          "name": "tabs-adventures",
+          "instances": [
+            ".tabs.panelcontainer"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            ".image-list.list"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-page-title",
+          "name": "Page Title",
+          "selector": "main.cmp-layout-container--fixed:nth-of-type(1)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "h1.cmp-title__text"
+          ]
+        },
+        {
+          "id": "section-2-hero-teaser",
+          "name": "Experience the world with us",
+          "selector": ".teaser.cmp-teaser--hero",
+          "style": null,
+          "blocks": [
+            "hero-intro"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3-current-adventures",
+          "name": "Current Adventures",
+          "selector": "main.cmp-layout-container--fixed:nth-of-type(2)",
+          "style": null,
+          "blocks": [
+            "tabs-adventures"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.separator"
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
 }

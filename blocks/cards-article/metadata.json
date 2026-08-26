@@ -33,9 +33,10 @@
   "usage": {
     "pagesUsing": [
       "/us/en",
-      "/us/en/magazine"
+      "/us/en/magazine",
+      "/us/en/adventures"
     ],
-    "reuseCount": 2,
+    "reuseCount": 3,
     "lastUsed": "2026-08-26T00:00:00.000Z"
   }
 }

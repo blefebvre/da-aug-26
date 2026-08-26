@@ -2,8 +2,11 @@
 /* global WebImporter */
 /**
  * Parser for cards-article. Base: cards.
- * Source: https://wknd.site/us/en.html
+ * Source: https://wknd.site/us/en.html (also reused for /us/en/adventures.html)
  * Generated: 2026-08-26
+ *
+ * Reused as-is for the adventures template: adventures cards use the same
+ * .cmp-image-list__item structure (image + title link + description).
  *
  * Cards block: 2 columns, multiple rows. First row = block name.
  * Each subsequent row = one card: [image cell, text cell].
